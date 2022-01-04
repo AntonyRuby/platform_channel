@@ -7,7 +7,28 @@ import Flutter
     _ application: UIApplication,
     didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
   ) -> Bool {
-    GeneratedPluginRegistrant.register(with: self)
-    return super.application(application, didFinishLaunchingWithOptions: launchOptions)
-  }
-}
+      
+      let controller: FlutterViewController = window?.rootViewController as! FlutterViewController
+
+      let CHANNEL = FlutterMethodChannel(name: "com.example.flutter/device_info", binaryMessenger: controller.binaryMessenger)
+
+      CHANNEL.setMethodCallHandler { (methodCall, result)in
+
+      if methodCall.method == "Print"{
+
+      result("Hi")
+
+      }
+
+      }
+
+//      GeneratedPluginRegistrant.register(with: self)
+
+      return super.application(application, didFinishLaunchingWithOptions: launchOptions)
+
+
+
+      }
+
+      }
+      
