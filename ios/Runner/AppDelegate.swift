@@ -61,7 +61,7 @@ import CryptoSwift
 var keyValue :String!
 
 class CryptoHelper{
-    private static let iv = "hertllertoer";
+    private static let iv = "RF22SW76BV83EDH8";
     // ENCRYPTION
     public static func encrypt(dataFromFlutter :String, keyFromFlutter :String) -> String? {
         
